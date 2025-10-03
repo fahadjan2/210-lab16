@@ -35,12 +35,11 @@ public:
 
 //Populating the data and printing
 int main() {
-    Color * colors = new Color[COLOR_SIZE];
+    Color color1;
+    Color color2(21);
+    Color color3(25, 54, 23);
 
-
-    for (int i = 0; i < COLOR_SIZE; i++) {
-        colors[i].print();
-    }
-
-    delete [] colors;
+    color1.print();
+    color2.print();
+    color3.print();
 }
