@@ -13,13 +13,18 @@ private:
     int blue;
 
 public:
+    //Getter/Setters
     int getRed() {return red;}
     int getGreen() {return green;}
     int getBlue() {return blue;}
-
     void setRed(int r) {red = r;}
     void setGreen(int g) {green = g;}
     void setBlue(int b) {blue = b;}
+
+    //Constructors
+    Color() {red = 0; green = 0; blue = 0;}
+    Color(int r) {red = r; green = 0; blue = 0;}
+    Color(int r, int g, int b) {red = r; green = g; blue = b;}
 
     void print() {
         cout << "Red: " << red << endl;
@@ -31,18 +36,7 @@ public:
 //Populating the data and printing
 int main() {
     Color * colors = new Color[COLOR_SIZE];
-    
-    colors[0].setRed(5);
-    colors[0].setGreen(8);
-    colors[0].setBlue(59);
 
-    colors[1].setRed(45);
-    colors[1].setGreen(25);
-    colors[1].setBlue(51);
-
-    colors[2].setRed(57);
-    colors[2].setGreen(85);
-    colors[2].setBlue(95);
 
     for (int i = 0; i < COLOR_SIZE; i++) {
         colors[i].print();
